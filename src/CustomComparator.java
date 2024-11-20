@@ -1,9 +1,19 @@
+import java.util.Comparator;
+public  class CustomComparator implements Comparator<String> {
 
-public class CustomComparator {
+   @Override
+   public int compare(String number1, String number2) {
+       int value =  number1.compareTo(number2);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+       // elements are sorted in reverse order
+       if (value > 0) {
+           return -1;
+       }
+       else if (value < 0) {
+           return 1;
+       }
+       else {
+           return 0;
+       }
+   }
 }
